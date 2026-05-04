@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int M = 10000;
+    int M = 100000;
 
     mt19937 gen(0);
     uniform_real_distribution<long double> dist(0.0, 1.0);
