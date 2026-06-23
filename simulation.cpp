@@ -27,6 +27,9 @@ int main(){
 
     ofstream data_kac("./plot_kac.dat");
     data_kac << "# Tempo\tProbabilidade\n";
+
+    ofstream data_walk("./plot_walk.dat");
+    data_walk << "# Tempo\tPosicao\n";
     
     for(long double i=0; i<M; i++){
         if(position == 0){
@@ -45,6 +48,7 @@ int main(){
 
         data_counting<<i+1<<"\t"<<count/(i+1)<<"\n";
         data_kac<<i+1<<"\t"<<returns/(last_T - first_T)<<"\n";
+        data_walk<<i+1<<"\t"<<position<<"\n";
     }
 
     data_counting.close();
